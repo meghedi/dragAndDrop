@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Draggabel Js</title>
+    <style type="text/css">
+      .parent {
+        width: 500px;
+        margin: 0 auto;
+        border: 1px solid #666666;
+        padding: 5px;
+        height: 50px;
+      }
+      #draggableSpan,
+      #dropZoneSpan {
+        background-color: aqua;
+        padding: 5px;
+        float: left;
+        vertical-align: middle;
+      }
+
+      #dropZoneSpan {
+        background-color: blueviolet;
+        padding: 5px;
+        float: right;
+      }
+      .parent:after {
+        float: none;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <span id="draggableSpan" draggable="true" ondragstart="onDragStart(event)"
+        >draggable
+      </span>
+      <span
+        id="dropZoneSpan"
+        ondragover="onDragOver(event)"
+        ondrop="onDrop(event)"
+        >dropzone</span
+      >
+    </div>
+
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
